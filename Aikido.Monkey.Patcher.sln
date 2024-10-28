@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTool", "TestTool\TestTool.csproj", "{F93CDD61-3CB2-44E3-B50E-680A4ED1115A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aikido.Logging.Dapper", "Aikido.Interceptors\Aikido.Logging.Dapper.csproj", "{B93139D0-7E43-4A8C-B874-9ED540AE41B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F93CDD61-3CB2-44E3-B50E-680A4ED1115A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93CDD61-3CB2-44E3-B50E-680A4ED1115A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93CDD61-3CB2-44E3-B50E-680A4ED1115A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93CDD61-3CB2-44E3-B50E-680A4ED1115A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE16582D-9CC9-429F-AF0E-039955045508}
+	EndGlobalSection
+EndGlobal
