@@ -5,8 +5,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <InterceptorsPreviewNamespaces>$(InterceptorsPreviewNamespaces);TestTool</InterceptorsPreviewNamespaces>
-	  <UserSecretsId>1fa51199-e0c3-44a3-802e-74e6cda9a94d</UserSecretsId>
+	<InterceptorsPreviewNamespaces>$(InterceptorsPreviewNamespaces);TestTool</InterceptorsPreviewNamespaces>
+	<UserSecretsId>1fa51199-e0c3-44a3-802e-74e6cda9a94d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

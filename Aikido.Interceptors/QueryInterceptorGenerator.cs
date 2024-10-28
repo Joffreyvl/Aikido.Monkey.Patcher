@@ -1,5 +1,4 @@
-﻿using Aikido.Logging.Dapper.Extensions;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using System.Collections.Immutable;
@@ -28,7 +27,8 @@ public class QueryInterceptorGenerator : IIncrementalGenerator
     private void Execute(SourceProductionContext context, ImmutableArray<(InvocationExpressionSyntax, Location)?> invocations)
     {
         //var @namespace = "Aikido.Logging.Dapper";
-        var @namespace = "TestTool";
+        //var @namespace = "TestTool";
+        var @namespace = "TestApi";
 
         var interceptsLocationAttributes = GenerateInterceptsLocationAttributes(invocations);
 
@@ -81,9 +81,14 @@ namespace {@namespace}
             var filePath = location.SourceTree?.FilePath;
             var lineSpan = location.GetLineSpan();
             var lineNumber = lineSpan.StartLinePosition.Line + 1;
-            var invocationIndex = lineSpan.GetInvocationIndex(".QueryAsync") + 1;
 
-            interceptsLocationBuilder.AppendLine($@"        [InterceptsLocation(""{filePath}"", {lineNumber}, {invocationIndex})]");
+            if (invocation.Expression is MemberAccessExpressionSyntax memberAccess)
+            {
+                var methodName = memberAccess.Name;
+                var queryAsyncStartIndex = methodName.Span.Start - location.SourceTree.GetText().Lines[lineNumber - 1].Start +1;
+
+                interceptsLocationBuilder.AppendLine($@"        [InterceptsLocation(""""""{filePath}"""""", {lineNumber}, {queryAsyncStartIndex})]");
+            }
         }
 
         return interceptsLocationBuilder.ToString();

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTool", "TestTool\TestTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aikido.Logging.Dapper", "Aikido.Interceptors\Aikido.Logging.Dapper.csproj", "{B93139D0-7E43-4A8C-B874-9ED540AE41B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi", "TestApi\TestApi.csproj", "{2ABE5E6B-FE56-4AB8-BB4D-55BD9EA96369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93139D0-7E43-4A8C-B874-9ED540AE41B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ABE5E6B-FE56-4AB8-BB4D-55BD9EA96369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABE5E6B-FE56-4AB8-BB4D-55BD9EA96369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABE5E6B-FE56-4AB8-BB4D-55BD9EA96369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABE5E6B-FE56-4AB8-BB4D-55BD9EA96369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
