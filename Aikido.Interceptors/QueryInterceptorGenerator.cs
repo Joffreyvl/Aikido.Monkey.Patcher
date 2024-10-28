@@ -38,6 +38,7 @@ using Microsoft.Extensions.Logging;
 using System.Data;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace {@namespace}
 {{
@@ -52,7 +53,7 @@ namespace {@namespace}
         }}
 
 {interceptsLocationAttributes}
-        public static Task QueryAsync(this SqlConnection sqlConnection, string sql, object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+        public static Task InterceptedQueryAsync(this SqlConnection sqlConnection, string sql, object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, CommandType? commandType = null)
         {{
             logger?.LogInformation(""Query: {{query}}"", sql);
             return sqlConnection.QueryAsync(sql, param, transaction, commandTimeout, commandType);
