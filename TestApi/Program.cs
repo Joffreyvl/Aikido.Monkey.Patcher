@@ -1,6 +1,5 @@
 using Dapper;
 using Microsoft.Data.SqlClient;
-using TestApi;
 using TestApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +12,7 @@ builder.Services.AddSqlConection(builder.Configuration["sql:connectionString"]!)
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
-QueryLoggerInterceptor.ConfigureLogger(logger);
+TestApi.QueryLoggerInterceptor.ConfigureLogger(logger);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

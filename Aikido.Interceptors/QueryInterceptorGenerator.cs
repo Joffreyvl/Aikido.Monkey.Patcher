@@ -39,6 +39,13 @@ using System.Data;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Dapper;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Globalization;
+using System.Linq;
+using System.Threading;
 
 namespace {@namespace}
 {{
@@ -53,10 +60,10 @@ namespace {@namespace}
         }}
 
 {interceptsLocationAttributes}
-        public static Task InterceptedQueryAsync(this SqlConnection sqlConnection, string sql, object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+        public static Task<IEnumerable<dynamic>> InterceptedQueryAsync(this IDbConnection cnn, string sql, object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, CommandType? commandType = null)
         {{
             logger?.LogInformation(""Query: {{query}}"", sql);
-            return sqlConnection.QueryAsync(sql, param, transaction, commandTimeout, commandType);
+            return cnn.QueryAsync(sql, param, transaction, commandTimeout, commandType);
         }}
     }}
 }}
